@@ -131,44 +131,6 @@
             "Post": {
                 "title": "Post",
                 "description": "Descrição dos elementos do model Post",
-                "properties": {
-                    "id": {
-                        "title": "ID",
-                        "description": "ID",
-                        "type": "integer",
-                        "format": "bigint(20)",
-                        "example": 123
-                    },
-                    "title": {
-                        "title": "title",
-                        "description": "Título do Post",
-                        "type": "string",
-                        "format": "varchar(255)",
-                        "example": "Aconteceu hoje no Brasil"
-                    },
-                    "content": {
-                        "title": "Content",
-                        "description": "Conteúdo do Post",
-                        "type": "string",
-                        "format": "text",
-                        "example": "Aqui vai o conteúdo do post"
-                    },
-                    "created_at": {
-                        "title": "Created at",
-                        "description": "Data de criação do Post",
-                        "type": "string",
-                        "format": "timestamp",
-                        "example": "2020-01-27 17:50:45"
-                    },
-                    "updated_at": {
-                        "title": "Updated at",
-                        "description": "Data de atualização do Post",
-                        "type": "string",
-                        "format": "timestamp",
-                        "example": "2020-01-27 17:50:45"
-                    }
-                },
-                "type": "object",
                 "xml": {
                     "name": "Post"
                 }
