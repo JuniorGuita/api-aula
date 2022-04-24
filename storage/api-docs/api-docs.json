@@ -1,0 +1,184 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Api para aula da Pós",
+        "description": "Criação de uma Api com crud de Posts",
+        "contact": {
+            "email": "junior.siqueira.ti@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/posts": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Recupera a listagem de Posts",
+                "description": "Retorna uma lista com todos os posts cadastrados na base.",
+                "operationId": "cce7863441436fd49dc474491f658292",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso"
+                    }
+                }
+            }
+        },
+        "/post": {
+            "post": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Insere um novo Post",
+                "description": "Retorna os dados do Post cadastrado",
+                "operationId": "4c2063f44313be551d5ad54ccd9cdec0",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "path",
+                        "description": "Título do Post",
+                        "required": true
+                    },
+                    {
+                        "name": "content",
+                        "in": "path",
+                        "description": "Conteúdo do Post",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "content": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "title": "Título do Post",
+                                    "content": "Conteúdo do Post"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Sucesso"
+                    }
+                }
+            }
+        },
+        "/post/{id}": {
+            "put": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Atualiza um Post existente",
+                "description": "Atuliza um Post através de seu ID",
+                "operationId": "6087a09403facb09cc4d7e2d336defb1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Post id",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Sucesso"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Exclui um Post existente",
+                "description": "Exclui o registro de um Post passando o id",
+                "operationId": "427462def8e79acf027bdb3181accc54",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Post id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Sucesso"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Post": {
+                "title": "Post",
+                "description": "Descrição dos elementos do model Post",
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "description": "ID",
+                        "type": "integer",
+                        "format": "bigint(20)",
+                        "example": 123
+                    },
+                    "title": {
+                        "title": "title",
+                        "description": "Título do Post",
+                        "type": "string",
+                        "format": "varchar(255)",
+                        "example": "Aconteceu hoje no Brasil"
+                    },
+                    "content": {
+                        "title": "Content",
+                        "description": "Conteúdo do Post",
+                        "type": "string",
+                        "format": "text",
+                        "example": "Aqui vai o conteúdo do post"
+                    },
+                    "created_at": {
+                        "title": "Created at",
+                        "description": "Data de criação do Post",
+                        "type": "string",
+                        "format": "timestamp",
+                        "example": "2020-01-27 17:50:45"
+                    },
+                    "updated_at": {
+                        "title": "Updated at",
+                        "description": "Data de atualização do Post",
+                        "type": "string",
+                        "format": "timestamp",
+                        "example": "2020-01-27 17:50:45"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "Post"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Posts",
+            "description": "Endpoints da API de Posts"
+        }
+    ]
+}
