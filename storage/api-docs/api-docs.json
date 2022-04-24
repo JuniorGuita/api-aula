@@ -34,7 +34,7 @@
                     "Posts"
                 ],
                 "summary": "Insere um novo Post",
-                "description": "Retorna os dados do Post cadastrado",
+                "description": "Insere e retorna os dados do Post cadastrado",
                 "operationId": "4c2063f44313be551d5ad54ccd9cdec0",
                 "parameters": [
                     {
@@ -105,7 +105,7 @@
                     "Posts"
                 ],
                 "summary": "Exclui um Post existente",
-                "description": "Exclui o registro de um Post passando o id",
+                "description": "Exclui o registro de um Post passando o ID",
                 "operationId": "427462def8e79acf027bdb3181accc54",
                 "parameters": [
                     {

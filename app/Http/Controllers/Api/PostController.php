@@ -31,7 +31,7 @@ class PostController extends Controller
      *      path="/post",
      *      tags={"Posts"},
      *      summary="Insere um novo Post",
-     *      description="Retorna os dados do Post cadastrado",
+     *      description="Insere e retorna os dados do Post cadastrado",
      *      @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
@@ -113,7 +113,7 @@ class PostController extends Controller
      *      path="/post/{id}",
      *      tags={"Posts"},
      *      summary="Exclui um Post existente",
-     *      description="Exclui o registro de um Post passando o id",
+     *      description="Exclui o registro de um Post passando o ID",
      *      @OA\Parameter(
      *          name="id",
      *          description="Post id",
