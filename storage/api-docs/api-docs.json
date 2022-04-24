@@ -126,17 +126,6 @@
             }
         }
     },
-    "components": {
-        "schemas": {
-            "Post": {
-                "title": "Post",
-                "description": "Descrição dos elementos do model Post",
-                "xml": {
-                    "name": "Post"
-                }
-            }
-        }
-    },
     "tags": [
         {
             "name": "Posts",
